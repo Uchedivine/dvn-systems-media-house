@@ -42,6 +42,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'dvn_admin' => [
+            'driver' => 'session',
+            'provider' => 'dvn_admin_users',
+        ],
     ],
 
     /*
@@ -65,6 +70,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', User::class),
+        ],
+
+        'dvn_admin_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Landlord\DvnAdminUser::class,
         ],
 
         // 'users' => [
